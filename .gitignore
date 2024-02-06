@@ -1,0 +1,7 @@
+*.docx
+*.html
+*.pdf
+*.Rproj
+*_files/
+.Rproj.user
+example_files/

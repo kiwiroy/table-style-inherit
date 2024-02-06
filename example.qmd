@@ -1,0 +1,45 @@
+---
+title: "Table-style-inherit Example"
+filters:
+  - table-style-inherit
+---
+
+This filter adds a `custom-style` attribute to the table block. In this example with the value `StyleWithTableDestination`.
+
+::: {custom-style="StyleWithTableDestination"}
+| Year | Score | Title                  |
+|------+-------+------------------------|
+| 1968 | 86    | Greetings              |
+| 1970 | 17    | Bloody Mama            |
+| 1970 | 73    | Hi, Mom!               |
+| 1971 | 40    | Born to Win            |
+| 1973 | 98    | Mean Streets           |
+| 1973 | 88    | Bang the Drum Slowly   |
+| 1974 | 97    | The Godfather, Part II |
+| 1976 | 41    | The Last Tycoon        |
+| 1976 | 99    | Taxi Driver            |
+:::
+
+## Quarto
+
+Installing this filter in your project...
+
+```sh
+quarto add kiwiroy/table-style-inherit
+```
+
+Then, you can use it in your project like this:
+
+```yaml
+---
+title: "Your document"
+filters:
+  - table-style-inherit
+---
+```
+
+The rendering of this file is achieved by the following command:
+
+```sh
+quarto render example.qmd --to html --verbose
+```
