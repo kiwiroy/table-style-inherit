@@ -20,8 +20,8 @@ local function table_style_inherit(el)
       end
     end
   end
-  quarto.log.output(el.content[1].attr)
-  quarto.log.output(el.attr)
+  -- quarto.log.output(el.content[1].attr)
+  -- quarto.log.output(el.attr)
   return el
 end
 

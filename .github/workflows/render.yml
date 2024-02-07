@@ -1,0 +1,22 @@
+name: render using extension
+
+on:
+  push:
+    branches: "*"
+
+jobs:
+  render-using-extension:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - run: |
+          quarto --version
+      - uses: actions/checkout@v4
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
+          path: ./example.qmd
+      - name: Test output for style on table
+        run: |
+          grep -q '<table data-custom-style="StyleWithTableDestination" class="table">' example.html
